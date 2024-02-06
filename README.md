@@ -31,3 +31,22 @@ while (true) // Бесконечный цикл
 }
 }
 
+
+    //Задайте массив заполненный случайными трёхзначными числами.
+    // Напишите программу, которая покажет количество чётных чисел в массиве.
+    int[] num = new int[10];
+    Random random = new Random();
+    int evenCount = 0; // Счетчик  четных чисел
+    for (int i = 0; i < num.Length; i++)
+    {
+        num[i] = random.Next(100, 1000);
+        Console.Write(num[i] + " ");
+
+
+        if (num[i] % 2 == 0)
+        {
+            evenCount++;
+        }
+    }
+    System.Console.WriteLine($"Количество чётных чисел в массиве:{evenCount}");
+}
